@@ -44,7 +44,6 @@ class SeachBox extends React.Component {
                   onClick={() => this.requestBooks()}
                 >
                   Submit
-                  <Icon right>send</Icon>
                 </Button>
               </Row>
             </Card>
