@@ -17,7 +17,7 @@ export default class Saved extends React.Component {
         .get("https://www.googleapis.com/books/v1/volumes/" + bookId)
         .then(res => {
           const tempBooks = this.state.booksSaved;
-          tempBooks.push(res);
+          tempBooks.push(res.data);
           this.setState({
             booksSaved: tempBooks
           });
@@ -48,6 +48,7 @@ export default class Saved extends React.Component {
       <>
         {this.state.booksReady
           ? this.state.booksSaved.map(book => {
+            alert(JSON.stringify(book))
               return <SavedItem volume={book}></SavedItem>;
             })
           : console.log("books not ready")}
