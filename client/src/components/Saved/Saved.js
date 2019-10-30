@@ -48,7 +48,6 @@ export default class Saved extends React.Component {
       <>
         {this.state.booksReady
           ? this.state.booksSaved.map(book => {
-            alert(JSON.stringify(book))
               return <SavedItem volume={book}></SavedItem>;
             })
           : console.log("books not ready")}
